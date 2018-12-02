@@ -8,6 +8,9 @@ lazy val root = (project in file(".")).
       version      := "0.1.0-SNAPSHOT"
     )),
     name := "Hello",
+    libraryDependencies += json4s,
+    libraryDependencies += akkaActor,
     libraryDependencies += scalaTest % Test,
-    libraryDependencies +=  "org.json4s" %% "json4s-jackson" % "3.6.2"
+    libraryDependencies += akkaTestKit % Test
+
   )

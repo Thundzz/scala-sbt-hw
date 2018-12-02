@@ -2,7 +2,8 @@ package example
 
 import org.json4s._
 import org.json4s.jackson.Serialization
-import org.json4s.jackson.Serialization.{read, write}
+import org.json4s.jackson.Serialization.read
+
 import scala.util.Try
 
 object A {
@@ -33,7 +34,7 @@ object Hello extends App {
   */
   val json = """
   {
-    "b" : "bonjour theo",
+    "b" : "hello !",
     "c" : 3
   }
   """
@@ -43,6 +44,6 @@ object Hello extends App {
     case B(b) => println(s"It was a B : $b")
     case msg => println(s"I could not understand what that was : $msg")
   }
-  
+
 }
 
